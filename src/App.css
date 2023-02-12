@@ -21,13 +21,15 @@ body {
 .container {
     height: 80vh;
     width: 50vh;
-    background-color: black;
+
     border-radius: 1rem;
     padding: 1rem;
-    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-    ;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
 
@@ -53,9 +55,13 @@ body {
 .btn {
     display: grid;
     place-content: center;
-    background-color: rgb(77, 75, 75);
+    background: rgba(116, 84, 255, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 50%;
-    color: rgb(255, 254, 254);
+    color: rgb(255, 255, 255);
     cursor: pointer;
     font-weight: bold;
 }
@@ -65,21 +71,32 @@ body {
 }
 
 .light {
-    background-color: rgb(49, 48, 48);
+    background: rgba(97, 239, 130, 0.479);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     color: black;
 }
 
 .light:hover {
-    background-color: white;
+    background: rgba(117, 240, 150, 0.425);
+
 }
 
 .dark {
-    background-color: blue;
+    background: rgba(116, 84, 255, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .dark:hover {
-    background-color: white;
-    color: blue;
+    background: rgba(115, 84, 255, 0.918);
+    color: rgb(255, 255, 255);
 }
 
 .zero {

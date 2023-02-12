@@ -30,7 +30,15 @@ function App() {
   }, [])
 
 
-  const operatorType = e => { };
+  const operatorType = e => {
+    setTotal(false)
+    setOperator(e.target.innerText)
+    if (curState === "") return
+    if (preState !== "") {
+      equals()
+    } setPreState(curState)
+    setCurState("")
+  };
 
   const equals = e => { };
 
