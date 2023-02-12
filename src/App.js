@@ -1,5 +1,5 @@
 
-import { useState, UseEffect } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 
@@ -11,7 +11,24 @@ function App() {
   const [operator, setOperator] = useState(null);
   const [total, setTotal] = useState(false);
 
-  const inputNum = e => { };
+  const inputNum = e => {
+    if (curState.includes(".") && e.target.innerText === ".") return
+    if (total) {
+      setPreState("")
+    }
+
+    curState ? setCurState((pre) => pre + e.target.innerText) : setCurState(e.target.innerText)
+    setTotal(false);
+  };
+
+  useEffect(() => {
+    setInput(curState)
+  }, [curState])
+
+  useEffect(() => {
+    setInput("0")
+  }, [])
+
 
   const operatorType = e => { };
 
@@ -21,12 +38,16 @@ function App() {
 
   const percent = () => { };
 
-  const reset = () => { };
+  const reset = () => {
+    setPreState("");
+    setCurState("");
+    setInput("0");
+  };
 
   return (
     <div className="container">.
       <div className="wrapper">
-        <div className="screen"></div>
+        <div className="screen">{input}</div>
         <div className="btn light" onClick={reset}>AC</div>
         <div className="btn light" onClick={percent}>%</div>
         <div className="btn light" onClick={minusPlus}>+/-</div>
@@ -43,7 +64,7 @@ function App() {
         <div className="btn light" onClick={inputNum}>2</div>
         <div className="btn light" onClick={inputNum}>3</div>
         <div className="btn dark" onClick={operatorType}>-</div>
-        <div className="btn light" onClick={inputNum}>0</div>
+        <div className="btn zero" onClick={inputNum}>0</div>
         <div className="btn light" onClick={inputNum}>.</div>
         <div className="btn light" onClick={equals}>=</div>
       </div>
