@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useState, UseEffect } from "react";
+import "./App.css";
+
+
 
 function App() {
+  const [preState, setPreState] = useState("");
+  const [curState, setCurState] = useState("");
+  const [input, setInput] = useState("0");
+  const [operator, setOperator] = useState(null);
+  const [total, setTotal] = useState(false);
+
+  const inputNum = e => { };
+
+  const operatorType = e => { };
+
+  const equals = e => { };
+
+  const minusPlus = () => { };
+
+  const percent = () => { };
+
+  const reset = () => { };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">.
+      <div className="wrapper">
+        <div className="screen"></div>
+        <div className="btn light" onClick={reset}>AC</div>
+        <div className="btn light" onClick={percent}>%</div>
+        <div className="btn light" onClick={minusPlus}>+/-</div>
+        <div className="btn dark" onClick={operatorType}>/</div>
+        <div className="btn light" onClick={inputNum}>7</div>
+        <div className="btn light" onClick={inputNum}>8</div>
+        <div className="btn light" onClick={inputNum}>9</div>
+        <div className="btn dark" onClick={operatorType}>*</div>
+        <div className="btn light" onClick={inputNum}>4</div>
+        <div className="btn light" onClick={inputNum}>5</div>
+        <div className="btn light" onClick={inputNum}>6</div>
+        <div className="btn dark" onClick={operatorType}>+</div>
+        <div className="btn light" onClick={inputNum}>1</div>
+        <div className="btn light" onClick={inputNum}>2</div>
+        <div className="btn light" onClick={inputNum}>3</div>
+        <div className="btn dark" onClick={operatorType}>-</div>
+        <div className="btn light" onClick={inputNum}>0</div>
+        <div className="btn light" onClick={inputNum}>.</div>
+        <div className="btn light" onClick={equals}>=</div>
+      </div>
+
     </div>
-  );
+
+
+  )
 }
 
 export default App;
