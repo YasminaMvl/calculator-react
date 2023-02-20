@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-
+//Definir les states de chaque element
 
 function App() {
   const [preState, setPreState] = useState("");
@@ -40,8 +40,32 @@ function App() {
     setCurState("")
   };
 
-  const equals = e => { };
+  const equals = e => {
+    if (e.target.innerText === "=") {
+      setTotal(true)
+    };
 
+    let cal
+    switch (operator) {
+      case "/":
+        cal = String(parseFloat(preState) / parseFloat(curState));
+        break;
+      case "+":
+        cal = String(parseFloat(preState) + parseFloat(curState));
+        break;
+      case "*":
+        cal = String(parseFloat(preState) * parseFloat(curState));
+        break;
+      case "-":
+        cal = String(parseFloat(preState) - parseFloat(curState));
+        break;
+      default:
+        break;
+    }
+    setInput("")
+    setPreState(cal)
+    setCurState("")
+  }
   const minusPlus = () => { };
 
   const percent = () => { };
