@@ -90,7 +90,7 @@ function App() {
   };
 
   return (
-    <div className="container">.
+    <div className="container">
       <div className="wrapper">
 
         <div className="screen">{input !== "" || input === "0" ? (
