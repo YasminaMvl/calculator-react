@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { NumericFormat } from "react-number-format";
 import "./App.css";
 
 //Definir les states de chaque element
@@ -66,7 +67,13 @@ function App() {
     setPreState(cal)
     setCurState("")
   }
-  const minusPlus = () => { };
+  const minusPlus = () => {
+    if (curState.charAt(0) === "-") {
+      setCurState(curState.substring(1));
+    } else {
+      setCurState("-" + curState);
+    }
+  };
 
   const percent = () => { };
 
@@ -79,7 +86,17 @@ function App() {
   return (
     <div className="container">.
       <div className="wrapper">
-        <div className="screen">{input}</div>
+
+        <div className="screen">{input !== "" || input === "0" ? (
+          <NumericFormat
+            value={input}
+            displayType={"text"}
+            thousandSeparator={true} />) : (
+          <NumericFormat
+            value={preState}
+            displayType={"text"}
+            thousandSeparator={true} />)} </div>
+
         <div className="btn light" onClick={reset}>AC</div>
         <div className="btn light" onClick={percent}>%</div>
         <div className="btn light" onClick={minusPlus}>+/-</div>
