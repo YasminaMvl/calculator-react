@@ -37,9 +37,11 @@ function App() {
     if (curState === "") return
     if (preState !== "") {
       equals()
-    } setPreState(curState)
-    setCurState("")
-  };
+    } else {
+      setPreState(curState)
+      setCurState("")
+    };
+  }
 
   const equals = e => {
     if (e.target.innerText === "=") {
@@ -75,7 +77,11 @@ function App() {
     }
   };
 
-  const percent = () => { };
+  const percent = () => {
+    preState
+      ? setCurState(String((parseFloat(curState) / 100) * preState))
+      : setCurState(String((parseFloat(curState) / 100)));
+  };
 
   const reset = () => {
     setPreState("");

@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: burlywood;
+    background-image: url("/public/hd-wallpaper-ga2780f177_1920.jpg");
     display: grid;
     place-content: center;
     font-family: "Roboto, sans-serif";
@@ -35,7 +35,7 @@ body {
 
 .wrapper {
     display: grid;
-    height: 100%;
+    height: 93%;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -45,10 +45,15 @@ body {
 .screen {
     grid-column: 1 / -1;
     color: white;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+    border-radius: 5px;
     text-align: right;
-    padding: 0.5rem;
-    font-size: 4rem;
+    font-size: 3rem;
     overflow: hidden;
+    padding-right: 0.5rem;
 
 }
 
@@ -64,10 +69,24 @@ body {
     color: rgb(255, 255, 255);
     cursor: pointer;
     font-weight: bold;
+    text-align: center;
 }
 
 .btn:hover {
     background: rgba(116, 84, 255, 0.75);
+}
+
+.btn.zero {
+    background: rgba(116, 84, 255, 0.75);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
 }
 
 .light {
