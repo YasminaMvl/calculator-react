@@ -23,7 +23,7 @@ body {
     width: 50vh;
     border-radius: 1rem;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.103);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
@@ -46,7 +46,7 @@ body {
     color: white;
 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.2px);
+    backdrop-filter: blur(1.2px);
     -webkit-backdrop-filter: blur(6.2px);
     border-radius: 5px;
     text-align: right;
@@ -86,6 +86,7 @@ body {
     cursor: pointer;
     font-weight: bold;
     text-align: left;
+    font-size: 3rem;
 }
 
 .btn.zero:hover {
